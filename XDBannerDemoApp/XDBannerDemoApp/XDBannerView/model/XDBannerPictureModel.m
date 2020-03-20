@@ -10,12 +10,21 @@
 
 @implementation XDBannerPictureModel
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setPictureUrl:(NSString *)pictureUrl {
+    _pictureUrl = pictureUrl;
+    
+    self.sourceType = XDBannerPictureSourceType_Download;
 }
-*/
 
+- (void)setImgObjOfPicture:(UIImage *)imgObjOfPicture {
+    _imgObjOfPicture = imgObjOfPicture;
+    
+    self.sourceType = XDBannerPictureSourceType_ImageObj;
+}
+
+- (void)setPictureData:(NSData *)pictureData {
+    _pictureData = pictureData;
+    
+    self.sourceType = XDBannerPictureSourceType_LocalData;
+}
 @end

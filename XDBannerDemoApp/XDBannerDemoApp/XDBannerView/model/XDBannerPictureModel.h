@@ -27,6 +27,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// img obj
 @property (nonatomic, strong)   UIImage *imgObjOfPicture;
 
+/// source type  that automatically set when set upper propeties 
+@property (nonatomic, assign)   XDBannerPictureSourceType sourceType;
+
 /// block of the function by clicking the picture
 @property (nonatomic, copy)     void(^clickFunc)(XDBannerPictureModel *picModel);
 
